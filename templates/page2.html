@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/png">
+    <style>
+        Body {
+            Background-image: url("{{ url_for('static', filename='back.jpg') }}");
+            Background-size: cover;
+            Background-position: center;
+            Margin: 0;
+            Padding: 0;
+            Font-size: 25px;
+            Color: white;
+            Text-align: justify;
+            Line-height: 1.6;
+            Display: flex;
+            Flex-direction: column;
+            Align-items: center;
+            Box-sizing: border-box;
+        }
+
+        H1 {
+            Color:gold;
+            Font-family: 'Times New Roman', Times, serif;
+            Text-shadow: 2px 5px 4px rgb(235, 221, 143);
+            Margin-bottom: 0.5em;
+        }
+
+        .content {
+            Width: 80%;
+            Padding: 20px;
+            Background: rgba(0, 0, 0, 0.5);
+            Border-radius: 15px;
+            Box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            Margin: 20px 0;
+        }
+
+        .content img {
+            Border-radius: 15px;
+            Margin: 10px 0;
+        }
+        .image1{
+        Width: 30%;
+      }
+      .image2{
+        Width: 30%;
+      }
+      .image3{
+        Width: 30%;
+      }
+        @media (max-width: 768px) {
+            .content {
+                Width: 90%;
+            }
+
+            .content img {
+                Width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1><b><em>Fennec Fox</em></b></h1>
+        <img src="{{ url_for('static', filename='fennec.jpg') }}" class="image1">
+        <p><strong style="color: gold;">"The Fennec Fox"</strong>, also known as <strong>the desert fox</strong> or <strong>the prince of the sands</strong>, is a small species of fox belonging to the family Canidae. The Fennec Fox is considered one of the smallest foxes in the world, with a length of about 40 cm and a height of about 20 cm.</p>
+        <p>The Fennec Fox lives in the <em style="color: gold;">Sahara Desert</em> in North Africa, as well as in some areas of the Arabian Peninsula. This animal is distinguished by its ability to adapt to the harsh conditions of the desert, where it can survive for long periods without drinking water, deriving its moisture from the food it consumes.</p>
+        <img src="{{ url_for('static', filename='fennec3.jpeg') }}" class="image2" >
+        <p>One of the most notable features of the Fennec Fox is its <em  style="color: gold;">large ears</em>, which help it regulate its body temperature and detect sounds from long distances. It also has thick fur that aids in living in a hot desert environment.</p>
+        <p>The Fennec Fox is a <em style="color: gold;">nocturnal</em> animal, meaning it is most active at night. It primarily feeds on insects, rodents, and fruits, making it an omnivorous animal.</p>
+        <p>The Fennec Fox is a unique animal characterized by its physical traits and distinctive behavior, making it one of the fascinating creatures in the animal kingdom.</p>
+        <img src="{{ url_for('static', filename='fennec2.jpeg') }}"  class="image3">
+        <p>Fennec Foxes are also popular in the pet trade due to their playful and social nature. However, they require special care and attention to mimic their natural habitat as closely as possible, including a diet rich in proteins and a warm environment.</p>
+        <p>Conservation efforts are important to ensure the survival of <span style="color: gold;">Fennec Foxes </span>in the wild, as their habitat is increasingly threatened by human activities and climate change. Protecting the delicate desert ecosystem is crucial for maintaining the balance of this unique wildlife.</p>
+    </div>
+</body>
+</html>
+

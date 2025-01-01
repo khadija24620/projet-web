@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='page2.css') }}">
+    <style>
+        Body {
+          Background-image: url("{{ url_for('static', filename='back3.jpg') }}");
+            Background-size: cover;
+            Background-position: center;
+            Margin: 0;
+            Padding: 0;
+            Font-size: 25px;
+            Color: white;
+            Text-align: justify;
+            Line-height: 1.6;
+            Display: flex;
+            Flex-direction: column;
+            Align-items: center;
+            Box-sizing: border-box;
+        }
+
+        H1 {
+            Color: #03055B;
+            Font-family: 'Times New Roman', Times, serif;
+            Text-shadow: 1px 2px 3px rgb(197, 138, 9);
+            Margin-bottom: 0.5em;
+        }
+
+        .content {
+            Width: 80%;
+            Padding: 20px;
+            Background: rgba(0, 0, 0, 0.5);
+            Border-radius: 15px;
+            Box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            Margin: 20px 0;
+        }
+
+        .content img {
+            Width: 40%; 
+            Border-radius: 15px;
+            Margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                Width: 90%;
+            }
+
+            .content img {
+                Width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1><b><em style="color: rgb(197, 138, 9);">Albino Hedgehogs</em></b></h1>
+        <img src="{{ url_for('static', filename='ALBINOHED.jpeg') }}" alt="Albino Hedgehog">
+        <p><strong style="color: rgb(197, 138, 9);">"Albino hedgehogs"</strong>, are unique creatures distinguished by their lack of pigmentation, resulting in their characteristic white spines and pink skin. Albino hedgehogs, like their pigmented counterparts, have developed fascinating adaptations that enable them to thrive in their environments.</p>
+        <img src="{{ url_for('static', filename='ALBINO2.jpg') }}" alt="Albino Hedgehog">
+        <p>Albino hedgehogs exhibit a range of behaviors similar to those of regular hedgehogs. They are nocturnal animals, preferring to forage for food at night while retreating to their burrows or hiding places during the day. This nocturnal lifestyle helps them avoid predators and harsh daytime conditions. Their diet is omnivorous, consisting of insects, worms, small reptiles, and fruits. Despite their small size, hedgehogs play a significant role in controlling pest populations, making them valuable allies in agricultural settings.</p>
+        <img src="{{ url_for('static', filename='ALBINO3.jpg') }}" alt="Albino Hedgehog">
+        <p>However, albino hedgehogs face additional challenges due to their distinctive appearance. The lack of pigmentation makes them more visible to predators, which can increase their vulnerability. Additionally, their pink skin is more susceptible to sunburn and other environmental stresses. As a result, albino hedgehogs require extra care and protection to ensure their well-being. Providing a safe habitat and a balanced diet can significantly improve their chances of survival.</p>
+        <p>Overall, albino hedgehogs are a remarkable example of nature's diversity. Their unique coloration and behaviors make them fascinating subjects of study and observation. While they share many characteristics with other hedgehogs, their distinctive features and the challenges they face highlight the importance of biodiversity and the need to protect all species, regardless of their rarity.</p>
+    </div>
+</body>
+</html>
+
+
+

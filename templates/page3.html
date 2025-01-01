@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='page2.css') }}">
+    <style>
+        Body {
+            Background-image: url("{{ url_for('static', filename='BACK2.jpg') }}");
+            Background-size: cover;
+            Background-position: center;
+            Margin: 0;
+            Padding: 0;
+            Font-size: 25px;
+            Color: white;
+            Text-align: justify;
+            Line-height: 1.6;
+            Display: flex;
+            Flex-direction: column;
+            Align-items: center;
+            Box-sizing: border-box;
+        }
+
+        H1 {
+            Color: rgba(235, 78, 16, 0.712);
+            Font-family: 'Times New Roman', Times, serif;
+            Text-shadow: 2px 5px 4px #a52a2a5e;
+            Margin-bottom: 0.5em;
+        }
+
+        .content {
+            Width: 60%;
+            Padding: 20px;
+            Background: rgba(0, 0, 0, 0.5);
+            Border-radius: 15px;
+            Box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            Margin: 20px 0;
+        }
+
+        .content img {
+            Width: 30%; 
+            Border-radius: 15px;
+            Margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                Width: 90%;
+            }
+
+            .content img {
+                Width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1><b><em style="color: rgba(248, 80, 13, 0.712);">Meerkats</em></b></h1>
+        <img src="{{ url_for('static', filename='meerkats4.jpg') }}" alt="Meerkats Burrows">
+        <p><strong style="color: rgba(248, 80, 13, 0.712);">"Meerkats"</strong>, also known as <strong style="color: rgba(255, 82, 14, 0.712);">Suricates</strong>, are small mammals that belong to the mongoose family. They are native to the deserts and grasslands of southern Africa, where they thrive in arid environments. Meerkats are renowned for their social structure and cooperative behavior. They live in large groups called «mobs" or «gangs", often consisting of multiple families.</p>
+        <p>One of the most distinctive traits of Meerkats is their vigilant behavior. They take turns standing on their <SPan style="color: rgba(255, 81, 12, 0.863);">hind legs </SPan>to keep watch for predators while the rest of the group forages for food. This lookout role is critical for the survival of the group, as it allows them to detect threats such as eagles and other predators from a distance. When a danger is spotted, the meerkats on duty emit a warning call to alert the others.</p>
+        <img src="{{ url_for('static', filename='meerkats3.jpg') }}" alt="Vigilant Meerkats">
+        <p>In addition to their alertness, meerkats are known for their <SPan style="color:rgba(255, 82, 14, 0.712) ;"> burrowing habits</SPan>. They dig extensive networks of tunnels and chambers where they seek shelter from the scorching sun and predators. These burrows also serve as a safe place for raising their young.</p>
+        <p>Meerkats have a complex social structure and often cooperate in raising the young of the group. Their cooperative behavior and social bonds are key to their survival in the harsh desert environment.</p>
+        <img src="{{ url_for('static', filename='meerkats2.jpg') }}" alt="Meerkats">
+        <p><SPan style="color: rgba(255, 82, 14, 0.712);">Meerkats </SPan>are fascinating creatures with unique behaviors and physical adaptations that make them well-suited to their environment. Their social nature and cooperative behavior make them a captivating subject for wildlife enthusiasts and researchers alike.</p>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{url_for('static',filename='logo.png')}}" type="image/png">
+<style>
+    body{
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .container {  
+        display: grid;
+        grid-template-areas: 
+        " header"
+        " content"
+        " footer";
+        grid-template-columns: AUTO;
+        grid-template-rows: 2fr 4fr 1fr;
+        height: 100vh; 
+    }
+    .header {
+    grid-area: header; 
+    background-color:  #032B44 ; 
+    color: rgb(189, 128, 54);
+    padding: 20px; 
+    text-align: center;
+    line-height: 1.8;
+
+}
+a{
+    text-decoration: none;
+} 
+    .content {
+    grid-area: content; 
+    background-image: url("{{url_for('static',filename='DESERT.jpg')}}"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.content-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}    
+.animal-name{
+    font-size: larger;
+    margin-top: 10px;
+    color: #001b2c;
+    text-shadow: 2px 2px 5px rgb(236, 174, 3);
+    text-decoration: none;
+    
+}   
+    .footer {
+    grid-area: footer;
+    background-color:#001b2c ; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+    .box{
+        margin: 18px;
+        border: 2px solid #032B44;
+        max-width: 100%;
+        height: auto;
+        transition:transform 0.3s ease;
+
+}
+.box:hover {
+        transform: scale(1.1);
+}
+</style>
+<body> 
+    <div class="container">
+       <header class="header"><SPan style="font-size: 50px;"> Discover the mysterious wildlife of the Sahara</SPan><br>The Sahara, with its vast stretches of dunes and desert landscapes, is home to a unique and fascinating array of creatures These saharien animals have adapted in extraordinary ways to one of the harshest environments on Earth.</header>
+       <main class="content" >
+        <div class="content-item">
+           <img src="{{url_for('static',filename='fennec.jpg')}}" width="300px" height="100px" class="box">
+           <a href="{{url_for('Fennec_Fox')}}" target="_self">
+           <div class="animal-name"><B>Fennec Fox</B></div>
+            </a>
+        </div>
+        <div class="content-item">
+           <img src="{{url_for('static',filename='meerkats.jpg')}}" width="300px" height="400px" class="box" >
+           <a href="{{url_for('Meerkats')}}" target="_self">
+           <div class="animal-name"><B>Meerkats</B></div>
+           </a>
+        </div>
+        <div class="content-item">
+           <img src="{{url_for('static',filename='ALBINO.jpg')}}"width="300px" height="100px" class="box">
+           <a href="{{url_for('Albino_hedgehogs')}}" target="_self">
+           <div class="animal-name"><B>Albino hedgehogs</B></div>
+        </a>
+        </div>   
+       </main>
+       <footer class="footer" style="font-size: 20px; color: rgb(185, 124, 49);">    <p>© 2024 Rare Desert Animals. All rights reserved.</p>
+       </footer>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{url_for('static',filename='logo.png')}}" type="image/png">
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='quiz.css')}}">
+               
+</head>
+<body>
+    <h1>Welcome, {{ name }} ! </h1>
+    <h2>Let us start a small quiz about what you had learned during your visit.</h2>
+                                  
+    <div class="container">
+
+        <h3>-This quiz is designed to help you practice and expand your knowledge about animals. Test what you know and discover fascinating facts about the animal kingdom!</h3>
+        <form action="quiz_submit" method="POST">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Quel est le plus grand oiseau vivant ?</p>
+                <label><input type="radio" name="q1" value="a"> A) L'autruche</label><br>
+                <label><input type="radio" name="q1" value="b"> B) Le condor</label><br>
+                <label><input type="radio" name="q1" value="c"> C) L'aigle royal</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Quel est l'animal terrestre le plus ancien encore vivant ?</p>
+                <label><input type="radio" name="q2" value="a"> A) L'éléphant</label><br>
+                <label><input type="radio" name="q2" value="b"> B) La tortue des Galápagos</label><br>
+                <label><input type="radio" name="q2" value="c"> C) Le crocodile</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Quel animal est considéré comme sacré en Inde ?</p>
+                <label><input type="radio" name="q3" value="a"> A) Le tigre</label><br>
+                <label><input type="radio" name="q3" value="b"> B) Le serpent</label><br>
+                <label><input type="radio" name="q3" value="c"> C) La vache</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Quel animal est capable de dormir debout ?</p>
+                <label><input type="radio" name="q4" value="a"> A) Le cheval</label><br>
+                <label><input type="radio" name="q4" value="b"> B) Le chien</label><br>
+                <label><input type="radio" name="q4" value="c"> C) Le gorille</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Quel est le plus petit mammifère du monde ?</p>
+                <label><input type="radio" name="q5" value="a"> A) Le musaraigne pygmée</label><br>
+                <label><input type="radio" name="q5" value="b"> B) La chauve-souris bourdon</label><br>
+                <label><input type="radio" name="q5" value="c"> C) Le hamster nain</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. Quel animal est surnommé "le cheval des mers" ?</p>
+                <label><input type="radio" name="q6" value="a"> A) Le dauphin</label><br>
+                <label><input type="radio" name="q6" value="b"> B) Le narval</label><br>
+                <label><input type="radio" name="q6" value="c"> C) L'hippocampe</label>
+            </div >
+            <div class="button mt-10"></div>
+            <button type="submit" class="btn btn-light" style="color: rgba(105, 156, 9, 0.603);"><b> Submit</b></button>
+        </form>
+</body>
+</html>

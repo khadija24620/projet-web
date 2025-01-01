@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{url_for('static',filename='logo.png')}}" type="image/png">
+
+
+</head>
+
+<style>
+    body{
+        background-image:url("{{url_for('static',filename='animation.jpg')}}");
+        background-size: cover ;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        gap: 40px;
+    }
+    footer {
+        background-color: rgb(210, 146, 91);
+      color: white; 
+      text-align: center; 
+      padding: 15px; 
+    }
+    @media (max-width: 590px) {
+      .video iframe {
+        max-width: 90%;
+      }
+    }
+</style>
+<body>
+    <div>
+        <h1 style="background-color: rgb(210, 146, 91);padding-left: 20px ;">🐾Amazing Animal Adventures: Discover the Wild Wonders of Our Planet!</h1>
+        <div class="container">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E5cVr3HdLa4?si=qfJyXbva0LwiiiP-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ogLFEq1X0RM?si=njBtHOJNRjphpGSb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2024 Amazing Animal Adventures. All Rights Reserved.
+      </footer>
+</body>
+</html>

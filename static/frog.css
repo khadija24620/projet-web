@@ -1,0 +1,176 @@
+Body{
+    Background-color: black;
+}
+
+.header {
+    Display: flex;
+    Align-items: center; 
+    Justify-content: space-between; 
+    Gap: 80px; /
+  }
+  
+  .text {
+    Flex: 1; 
+  }
+  
+  .text h1 {
+    Font-size: 36px; 
+  }
+  
+  .text p {
+    Font-size: 20px; 
+    Margin: 5px 0 0; 
+    Color: white;
+    Margin-left: 2%;
+  }
+  
+  .image img {
+    Width: 300px; 
+    Height: auto;
+    Border-radius: 10px;
+  }
+
+  H1{ 
+    Color: white ;
+    Font-size: 40px;;
+
+    Background-color:rgb(252, 164, 0) ;
+    Border-style: none none none solid ; 
+    Border-color: rgb(191, 133, 6);
+    Border-width: 30px;
+    Padding-left:30px;
+    Padding-top: 10px;
+    Padding-bottom: 10px;
+    Margin-top: 10 px;
+    Margin-left: 2%;
+    Margin-right:20%;
+    Margin-bottom: 8%;
+  }
+
+  Ul{
+    Color: white ;
+  }
+  
+  H2{
+    Color: rgb(252, 164, 0) ;
+    Margin-left: 2%;
+    Text-shadow: 0 0 15px yellow, 0 0 5px blue;
+  }
+
+  .grid-container {
+    Display: grid;
+    Grid-template-columns: repeat(2, 1fr) ;
+    Row-gap: 20px; 
+    Column-gap: 300px; 
+    Padding: 20px; 
+  }
+  .item-5 {
+    Grid-column: 1 / -1;  
+    Text-align: center; 
+}
+
+.item-5 .flex-container {
+    Display: flex;
+    Justify-content: center;
+    Flex-wrap: wrap;
+    Gap: 20px; 
+}
+
+.item-5 ul {
+    
+    Padding: 0;
+    Margin: 0 auto;
+}
+
+.item-5 div {
+    Margin: 10px;
+    Text-align: center; 
+}
+
+.item-5 .img {
+    Width: 200 px ;
+    Height: auto;
+    Margin-top: 10px;
+    Border-radius: 8px; 
+    Box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+  .flex-container {
+    Display: flex;
+    Flex-direction: row ;
+  }
+
+  Span{
+    Color: rgb(0, 247, 255);
+}
+
+.img{
+    Height: 100px;
+    Width: 100px;
+}
+
+@media (max-width: 768px) {
+    Body {
+        Font-size: 16px;
+    }
+
+    .header {
+        Flex-direction: column;
+        Align-items: center;
+    }
+
+    .header .text {
+        Text-align: center;
+        Margin-bottom: 20px;
+    }
+
+    .header .image img {
+        Width: 80%;
+        Max-width: 300px;
+    }
+
+    .grid-container {
+        Display: flex;
+        Flex-direction: column;
+        Gap: 20px;
+    }
+
+    .item-5 .flex-container {
+        Flex-direction: column;
+        Align-items: center;
+    }
+
+    .item-5 .flex-container div {
+        Margin-bottom: 20px;
+        Text-align: center;
+    }
+
+    .item-5 .img {
+        Width: 80%;
+        Max-width: 200px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    Body {
+        Font-size: 14px;
+        Line-height: 1.5;
+    }
+
+    .header .image img {
+        Width: 100%;
+        Max-width: 250px;
+    }
+
+    .grid-container {
+        Gap: 15px;
+    }
+
+    Footer {
+        Font-size: 12px;
+        Text-align: center;
+    }
+}

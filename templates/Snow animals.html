@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        Body {
+            Background-image: url("{{url_for('static',filename='snow back.jpg')}}");
+            Background-size: cover;
+            Background-position: center;
+            Background-repeat: no-repeat;
+            Width: 100%;
+            Height: 100vh;
+            Margin: 0;
+            Font-family: Arial, sans-serif;
+            Overflow: hidden; /* Pour éviter le défilement */
+            Position: relative; /* Ajouté pour positionner les éléments de manière absolue */
+        }
+        
+        H1 {
+            Color: rgba(3, 248, 248, 0.8);
+            Font-size: 1rem;
+            Font-family: 'Times New Roman', serif;
+            Text-align: center;
+            Text-shadow: 5px 7px 8px rgb(253, 250, 249);
+            Margin: 10px 0;
+        }
+        
+        .header {
+            Background-color: #334e72;
+            Color: rgb(241, 242, 245);
+            Padding: 18px;
+            Font-size: 1.5em;
+            Text-align: center;
+        }
+        
+        .container {
+            Position: relative;
+            Height: calc(100vh - 100px); /* Ajuste selon la hauteur de ton header */
+        }
+        
+        .animal {
+            Position: absolute;
+            Bottom: 20%;
+        
+        }
+
+        
+        .bear {
+            Left: 0;
+           bottom: 25%;
+        }
+        
+        .penguin {
+            Right: 10%;
+            
+        }
+        
+        .bear img{
+            width: 200px;
+            height: 200px;
+        
+        }
+        .penguin img{
+            width: 150px;
+            height: 150px;
+        }
+        .infoB, .infoP, .next {
+            Display: none;
+        }
+        .infoP, .infoB{
+            display: none;
+            position: absolute;
+            text-align: justify;
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 2, 12, 0.801);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 800px;
+            box-sizing: border-box;
+            transition: opacity 0.3s;
+        }
+        .infoB{
+            left: 10px;
+            bottom: 200px;
+        }
+        .infoP{
+            right: 10px;
+            bottom: 170px;
+        }
+        .box, .box2{
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .message {
+           margin-left: 10%;
+           margin-bottom:10px;
+           line-height: 1.8;
+            font-size: 20px;
+            color: rgb(254, 254, 255);
+            text-shadow: 3px 6px 6px aqua;
+        }
+
+        .next {
+            font-size: 30px;
+            color: rgb(254, 254, 255);
+            display: none;
+            text-shadow: 3px 6px 6px aqua;
+        }
+        
+
+        .animal input[type="radio"] {
+            Display: none;
+        }
+        
+        .box:hover{
+            transform: translateY(10px) scale(1.05);
+        }
+        .box2:hover{
+            transform: translateY(20px) scale(1.05);
+        }
+        #bearRadio:checked~.infoB {
+            Display: block;
+        }
+        
+        #bearRadio:checked~.next {
+            Display: block;
+        }
+        
+        #penguinRadio:checked~.infoP {
+            Display: block;
+        }
+        #bearRadio:checked~label{
+            filter: drop-shadow(0 0 30px rgba(3,248,248,0.8));
+        }
+        #penguinRadio:checked~label{
+            filter: drop-shadow(0 0 30px rgba(3,248,248,0.8));
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <p>As the earth is adorned with a pure white cover, the snow reflects the sunlight, illuminating the world with a crystalline brilliance!</p>
+        <p>Welcome to the pure white beauty!</p>
+    </header>
+    <div class="container">
+        <div class="animal bear">
+            <input type="radio" id="bearRadio" name="animal">
+            <label for="bearRadio">
+                <p class="message"><b>Hello,I am the polar bear. <br>Press me to get to know me better. </b></p>
+                <img src="{{url_for('static',filename='polar bear.webp')}}" class="box" alt="Polar Bear">
+            </label>
+            <div class="infoB">
+                <h1>Polar Bear</h1>
+                <p>The polar bear is one of the largest bears that inhabit the Arctic regions. It is characterized by its dense white fur and black skin, which helps it absorb heat from the sun. Adult males can weigh up to 900 kilograms, while females typically weigh between 300 and 500 kilograms.</p>
+                <p><b>Swimming Abilities:</b> The polar bear is known for its exceptional swimming abilities, capable of swimming distances exceeding 100 kilometers in search of food. Its primary diet consists of seals.</p>
+                <p><b>Environmental Threats:</b> However, climate change and the melting of sea ice pose significant threats to this species. This has prompted many organizations to work on protecting their habitats and raising environmental awareness to preserve them.</p>
+                <p><b>Sensory Abilities and Lifespan:</b> The polar bear has a strong sense of smell, enabling it to detect seals beneath the snow and frozen waters. In the wild, it can live for 20 to 30 years.</p>
+            </div>
+        </div>
+        <div class="animal penguin">
+            <input type="radio" id="penguinRadio" name="animal">
+            <label for="penguinRadio">
+                <p class="next"><b>Hi there!</b></p>
+                <img src="{{url_for('static',filename='penguine.webp')}}" class="box2" alt="Penguin">
+            </label>
+            <div class="infoP">
+                <h1>Penguin</h1>
+                <p>The penguin is a flightless bird that is highly adapted to life in the water. Known for its black and white plumage, penguins are excellent swimmers and are mostly found in the Southern Hemisphere. The Emperor Penguin, in particular, can reach up to 1.2 meters in height and weigh around 45 kilograms.</p>
+                <p><b>Swimming Abilities:</b> Penguins are capable of swimming at speeds up to 15 kilometers per hour, using their wings as flippers to propel through the water.</p>
+                <p><b>Environmental Threats:</b> Climate change and ocean pollution pose significant threats to penguin populations. Conservation efforts focus on protecting their habitats and food sources.</p>
+                <p><b>Lifespan:</b> Penguins can live for 15 to 20 years in the wild, depending on the species.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const penguinRadio = document.getElementById('penguinRadio');
+            const bearRadio = document.getElementById('bearRadio');
+            const infoB = document.querySelector('.infoB');
+            const infoP = document.querySelector('.infoP');
+            const next = document.querySelector('.next');
+            const message = document.querySelector('.message');
+            const messageText = message.querySelector('b');
+
+            let isPenguinVisible = false;
+            let isBearVisible = false;
+
+            penguinRadio.addEventListener('click', function() {
+                if (isPenguinVisible) {
+                    infoP.style.display = 'none';
+                    message.style.display = 'block';
+                    messageText.textContent = 'Good bye';
+                    penguinRadio.checked = false;
+                    isPenguinVisible = false;
+                } else {
+                    infoP.style.display = 'block';
+                    infoB.style.display = 'none';
+                    next.style.display = 'none';
+                    message.style.display = 'none';
+                    bearRadio.checked = false;
+                    isBearVisible = false;
+                    isPenguinVisible = true;
+                }
+            });
+
+            bearRadio.addEventListener('click', function() {
+                if (isBearVisible) {
+                    infoB.style.display = 'none';
+                    next.style.display = 'none';
+                    bearRadio.checked = false;
+                    isBearVisible = false;
+                } else {
+                    infoB.style.display = 'block';
+                    next.style.display = 'block';
+                    infoP.style.display = 'none';
+                    message.style.display = 'none';
+                    penguinRadio.checked = false;
+                    isPenguinVisible = false;
+                    isBearVisible = true;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

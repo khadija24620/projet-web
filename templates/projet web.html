@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='logo.png')}}" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{url_for('static',filename='logo.png')}}" alt="Adventures into the Heart of Wildlife Logo">
+            <h1>Adventures into the Heart of Wildlife</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><b><strong>Home</strong></b></li>
+                <li class="dropdown"><b><strong></strong>Creatures 
+                    <ul class="submenu">
+                        <li><a href="{{url_for('Desert_animals')}}">Desert animals</a></li>
+                        <li><a href="{{url_for('Forest_animals')}}">Forest animals</a></li>
+                        <li><a href="{{url_for('Sea_animals')}}">Sea animals</a></li>
+                        <li><a href="{{url_for('Snow_animals')}}">Snow animals</a></li>
+                    </ul></strong></b></a></li>
+                <li class="dropdown"><b><strong></strong>Interactive map
+                    <ul class="submenu">
+                        <li><a href="{{url_for('form')}}">Form</a></li>
+                        <li><a href="{{url_for('quiz')}}">Quiz</a></li>
+                        <li><a href="{{url_for('Animation')}}">Animation</a></li>
+                    </ul></strong></b></a></li>
+                <li><b><strong></strong><a href="{{url_for('Conservation')}}">Conservation</a></strong></b></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="hero">
+            <h2 style="color: rgb(169, 172, 17);" ><b><strong><strong>Welcome</strong></strong></b></h2>
+            <p><strong> &nbsp;To our website where you will discover more about animals and  wildlife . <br> Also to enhance your abilities and expand your knowledge about
+                 the animal kingdom . <br>&nbsp; Additionally with this content you will inspire a deeper apreciation of diverse animal species and their unique behaviours </strong></p>
+    </div>
+    <div class="social-media">
+        <a href="mailto:adventureswildlife58@gmail.com" target="_blank">
+            <img src="{{url_for('static',filename='twiter.png')}}" style="width: 40px;height:40px;margin-left:35px;">
+        </a> 
+        <a href="mailto:adventureswildlife58@gmail.com" target="_blank">
+            <img src="{{url_for('static',filename='instagram.png')}}"  style="width: 40px;height:40px;margin-left: 34px;">
+        </a>
+        <a href="mailto:adventureswildlife58@gmail.com" target="_blank">
+            <img src="{{url_for('static',filename='messages.png')}}"  style="width: 45px;height:40px;margin-left: 33px;">
+        </a>
+        <a href="mailto:adventureswildlife58@gmail.com" target="_blank">
+            <img src="{{url_for('static',filename='linkden.png')}}"  style="width: 40px;height:40px;margin-left: 32px;">
+        </a>
+        <a href="mailto:adventureswildlife58@gmail.com" target="_blank">
+            <img src="{{url_for('static',filename='facebook.png')}}" style="width: 35px;height:30px;margin-left: 32px;margin-bottom: 5px;">
+        </a>
+    </div>
+</body>
+</html>
+

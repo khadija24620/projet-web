@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventures into the Heart of Wildlife</title>
+  <link rel="icon" href="{{url_for('static',filename='logo.png')}}" type="image/png">
+  <style>
+    Body {
+  Font-family: Arial, sans-serif;
+  Margin: 0;
+  Padding: 0;
+  Background-color: #f3f4f6;
+  Color: #333;
+  Text-align: center;
+  Background-image: url("{{url_for('static',filename='forest.jpg')}}");
+  Background-size:cover;
+  Height: 100vh;
+}
+
+Header {
+  Background-color: #4CAF50;
+  Color: white;
+  Padding: 20px;
+}
+
+Header h1 {
+  Margin: 0;
+}
+
+.gallery {
+  Display: flex;
+  Flex-wrap: wrap;
+  Justify-content: center;
+  Gap: 20px;
+  Margin: 20px auto;
+  Padding: 0 10px;
+}
+a{
+    text-decoration: none;
+}
+.animal {
+  Width: 300px;
+  Border: 2px solid #ddd;
+  Border-radius: 8px;
+  Overflow: hidden;
+  Background-color:#4CAF50;
+  Box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  Transition: transform 0.3s;
+}
+
+.animal:hover {
+  Transform: scale(1.05);
+}
+
+.animal img {
+  Width: 100%;
+  Height: 200px;
+  Object-fit: cover;
+
+}
+
+.animal h2 {
+  Margin: 10px 0;
+  Font-size: 1.5em;
+}
+
+.animal p {
+  Padding: 0 10px;
+  Font-size: 1em;
+  Color: #555;
+}
+
+.animal a {
+  Display: inline-block;
+  Margin: 10px 0;
+  Padding: 10px 20px;
+  Background-color: #4CAF50;
+  Color: white;
+  Text-decoration: none;
+  Border-radius: 5px;
+  Transition: background-color 0.3s;
+}
+
+.animal a:hover {
+  Background-color: #45a049;
+}
+
+Footer {
+  Background-color: #333;
+  Color: white;
+  Padding: 10px 0;
+  Margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rare Forest Animals</h1>
+    <p>Discover some of the most unique animals that inhabit our planets forests !</p>
+  </header>
+
+  <main>
+    <section class="gallery">
+    
+      <div class="animal">
+        <a href="{{url_for('Black_Leopard')}}" target="_self">
+          <img src="{{url_for('static',filename='leopard2.jpg')}}" alt="Black Leopard">
+        </a>
+        <h2>Black Leopard</h2>
+      </div>
+
+
+
+      <div class="animal">
+        <a href="{{url_for('Philippine_Eagle')}}" target="_self">
+          <img src="{{url_for('static',filename='eagle2.jpg')}}" alt="Philippine Eagle">
+        </a>
+        <h2>Philippine Eagle</h2>
+      </div>
+
+      <div class="animal">
+        <a href="{{url_for('Poison_Dart_Frog')}}" target="_self">
+          <img src="{{url_for('static',filename='frog3.jpg')}}" alt="Poison Dart Frog">
+        </a>
+        <h2>Poison Dart Frog</h2>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Rare Forest Animals. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+body{
+    background-image: url(eagle.jpg); 
+    height: 100%;
+    background-size: cover ;
+    background-position: center;
+
+}
+h1{
+    color: rgb(255, 255, 255) ;
+    font-size: 40px;;
+    background-color:rgb(21, 252, 0) ;
+    border-style: none none none solid ; 
+    border-color: rgba(19, 27, 18, 0.205);
+    border-width: 30px;
+    padding-left:30px;
+    margin-left: 2%;
+    margin-right: 60%;
+}
+p{
+   color: rgb(255, 255, 255);
+   margin-left: 2%;
+   margin-right: 2%;
+   size: 10px;
+}
+h2{
+    color:rgb(21, 252, 0) ;
+    margin-left: 2%;
+    text-shadow: 0 0 15px yellow, 0 0 5px blue;
+}
+ul{
+    margin-right: 2%;
+}
+span{
+    color: yellowgreen;
+}
+
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* تقسيم إلى عمودين متساويين */
+    row-gap: 20px; /* مسافة بين الصفوف (عموديًا) */
+    column-gap: 300px; /* مسافة بين الأعمدة (أفقيًا) */
+
+    padding: 20px; /* مسافة داخلية للشبكة */
+
+}
+.grid-container > div {
+    color: white;
+}
+@media(max-width:643px){
+    .grid-container{
+        grid-template-columns: none;
+    }
+   h1{
+    font: size 35px;
+   } 
+}

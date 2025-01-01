@@ -1,0 +1,241 @@
+*{
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+    Font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+Body {
+    background-image: url(chamelon.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    Color:white;
+}
+
+Header {
+    Display: flex;
+    Justify-content: space-between;
+    Align-items: center;
+    Padding: 20px;
+}
+
+.logo {
+    Display: flex;
+    Align-items: center;
+}
+
+.logo img {
+    Width: 50px;
+    Margin-right: 15px;
+}
+
+Header h1 {
+    Font-size: 1.5rem;
+}
+
+Nav ul {
+    list-style: none;
+    display: flex;
+}
+
+Nav ul li {
+    margin-left: 20px;
+}
+Nav ul li :hover {
+    color:rgba(238, 255, 0, 0.99) ;
+}
+
+
+Nav ul li a {
+    Color: white;
+    Text-decoration: none;
+    Font-size: 1rem;
+}
+
+.hero {
+    position: relative;
+    Color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    text-align: center;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+
+}
+.hero .overlay {
+    Position: absolute;
+    Top: 0;
+    Left: 0;
+    Width: 100%;
+    Height: 100%;
+    Background: rgba(0, 0, 0, 0.4);
+}
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ; 
+}
+.hero {
+    height: 398px;
+    width: 400px;
+    padding: 30px;
+    margin: 20px;
+    border: 2px solid rgba(200, 255, 2, 0.4);
+    box-sizing: border-box;
+    line-height: 2;
+    box-shadow: 5px 5px 5px rgba(175, 250, 0, 0.63);
+}
+
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu>ul>li{
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    top: 40px;
+    left: 0;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 10000;
+}
+.submenu li{
+    padding: 10px;
+    background-color: #d3bf09;
+    border-bottom: 1px solid #ddd;
+    color: #fff6f6;
+    cursor: pointer;
+}
+.submenu li:hover{
+    background-color: rgba(10, 51, 10, 0.849);
+}
+.dropdown:hover .submenu{
+    display: block;
+}
+.menu ul:hover{
+    color: rgb(237,234,35);
+}
+a>img {
+    transition:transform 0.3s,filter 0.3s;
+    cursor: pointer;
+}
+div a{
+text-decoration:none;
+}
+a>img:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+} 
+a>img:active{ 
+    transform: scale(1.5); 
+    filter: brightness(2);
+}  
+@media (max-width:768px){
+    header{ 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    body{
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+    }
+    .hero{
+        Background: rgba(0, 0, 0, 0.5); 
+        width: 80%; 
+        height: 100%;
+
+    } 
+    
+    nav ul{
+        flex-direction: column;
+        align-items: flex-start;        
+    }  
+    nav ul li{
+        margin: 10px 0;
+    }  
+    .social-media{ 
+        display: flex;
+        flex-direction: row;
+        column-gap: 5% ;  
+    }    
+}
+@media (max-width:570px){
+    header{ 
+        font-size: 0.8rem;
+    }
+    body{
+        background-size: cover;
+        height: 100;
+        
+    }
+    .hero{  
+        width: 90%; 
+    } 
+    
+    nav ul li{
+        margin: 5px 0;
+    }  
+    .social-media{ 
+        width: 30%;
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        column-gap: 10%;
+    } 
+    .hero p{
+        font-size: 1rem;
+        line-height: 1.8;
+        
+    } 
+    .social-media{ 
+        display: flex;
+        flex-direction: row;
+        column-gap: 10% ;  
+    }      
+}
+@media (max-width:445px){ 
+    header{ 
+        line-height: 1;
+    }
+    body{
+        margin: 0;
+    }
+    .hero{  
+        width: 90%; 
+        margin-right: 10%;
+    } 
+    .social-media{ 
+        column-gap: 5% ;  
+    } 
+}
+@media (max-width:400px){ 
+    .hero{  
+        
+        width: 100dvw;
+        margin-left: 0; 
+        margin-right: 0;
+        box-sizing: border-box;
+        
+    }
+}

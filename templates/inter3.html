@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures into the Heart of Wildlife</title>
+    <link rel="icon" href="{{url_for('static',filename='logo.png')}}" type="image/png">
+<style>
+    Body{
+        Margin : 0 ;
+        Font-family : Arial, sans-serif ;
+        box-sizing: border-box;
+
+    }
+    .container {  
+        Display : grid ;
+        Grid-template-areas : 
+        "header"
+        "content"
+        "footer" ;
+        Grid-template-columns : auto;
+        Grid-template-rows : 1fr 3fr 1fr ;
+        Height : 100vh ; 
+    }
+    .header {
+    Grid-area : header ;
+    Background-color :  #0c93b1; 
+    Color :#e7eaeb  ;
+    Padding : 10px ; 
+    Text-align : center ;
+    Line-height : 1.2;
+
+}
+  
+    .content {
+    Grid-area : content ; 
+    Background-image : url("{{url_for('static',filename='sea1.jpg')}}") ; 
+    Background-repeat : no-repeat ;
+    Background-size : cover ;
+    Background-position :center ;  
+    Display : flex ;
+    Justify-content : center ;
+    Align-items : center ;
+
+}
+
+.content-item{
+    Display : flex ;
+    Flex-direction : column ;
+    Align-items : center ;
+    Margin : 20px ;
+}    
+.animal-name{
+    color: #e7eaeb;
+    Font-size : 20px ;
+    Margin-top : 10px ;
+    Text-shadow : 2px 5px 5px rgb(12, 188, 241) ;
+    font-family: 'Segoe UI', Tahoma,  Verdana, sans-serif ;
+   
+}   
+a{
+    text-decoration: none;
+}
+    .footer {
+    Grid-area : footer ;
+    background-color: #3ca4bb; 
+    Color : white ; 
+    Padding : 20px ; 
+    Text-align : center ; 
+}
+p{
+    color: pink;
+}
+.box{
+    Margin : 18px ;
+    Border : 2px solid rgb(107, 197, 224) ;
+    Max-width : 100% ;
+    Height : auto ;
+    Transition :transform 0.3s ease ;
+
+}
+.box:hover {
+        Transform : scale(1.1) ;
+}
+</style>
+<body> 
+    <div class="container">
+       <header class="header"><SPan style="font-size : 15px ;"> <h1>Who among us doesn’t feel curious to explore the depths of the sea ?<br> Let’s go then !</h1><p>The sea still fascinates us with the mystery of its depths and the beauty of its various creatures. Welcome to the depths of the seas </p>
+        </header>
+       <main class="content" >
+        <div class="content-item">
+            <img src="{{url_for('static',filename='dophin.jpg')}}" height="250px"  width= "250px" class="box" style="border: 5px solid #0e6c91;">
+            <a href="{{url_for('pink_dolphine')}}" target="_self">
+                <div class="animal-name">The pink dolphin</div>
+            </a>
+        </div> 
+        <div class="content-item">
+            <img src="{{url_for('static',filename='symphysodon.jpg')}}" height="150px"  width= "250px" class="box" style="border: 5px solid #0e6c91;">
+            <a href="{{url_for('symphysodon')}}" target="_self">
+                <div class="animal-name">Symphysodon Discus</div>
+            </a>
+        </div>        
+        <div class="content-item">
+           <img src="{{url_for('static',filename='dragonfish.jpg')}}" width= "250px" height= "300px" class="box" style=" border: 5px solid #0e6c91;" >
+           <a href="{{url_for('dragonfish')}}" target="_self">
+           <div class="animal-name">Black dragonfish</div>
+           </a>
+        </div>  
+       </main>
+       <footer class="footer" style="font-size : 20px ; color : rgb(182, 186, 207) ;"><p>© 2024 Rare Sea Animals. All rights reserved.</p>
+       </footer>    
+    </div>
+</body>
+</html>

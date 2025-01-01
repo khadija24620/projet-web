@@ -1,0 +1,61 @@
+Body{
+    Background-image: url(leopard.jpg);
+    Height: 100vh;
+    Background-size: cover ;
+}
+H1{
+    Color: white ;
+    Font-size: 40px;;
+    Background-color:rgb(21, 252, 0) ;
+    Border-style: none none none solid ; 
+    Border-color: rgba(8, 94, 0, 0.616);
+    Border-width: 30px;
+    Padding-left:30px;
+    Margin-left: 2%;
+    Margin-right: 60%;
+}
+P{
+   Color: white;
+   Margin-left: 2%;
+   Margin-right: 2%;
+   Size: 10px;
+}
+H2{
+    Color:rgb(21, 252, 0) ;
+    Margin-left: 2%;
+    Text-shadow: 0 0 15px yellow, 0 0 5px blue;
+}
+Ul{
+    Margin-right: 2%;
+}
+Span{
+    Color: yellowgreen;
+}
+
+    
+.grid-container {
+    Display: grid;
+    Grid-template-columns: repeat(2, 1fr); 
+    Row-gap: 20px; 
+    Column-gap: 300px; 
+
+    Padding: 20px; 
+
+}
+.grid-container > div {
+    Color: white;
+}
+@media(max-width:790px){
+    .grid-container{
+    Grid-template-columns: auto; 
+    Row-gap: 10px; 
+    Column-gap: 50px; 
+}
+}
+@media(max-width:1370px){
+   body {
+    Height: 100vh;
+    background-size: cover;
+    background-position: center;
+}  
+}
